@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DBFILE="/home/lais/contactlist.txt"
+DBFILE="contactlist.txt"
 addUser()
 {
    echo "Enter a first name"
@@ -20,6 +20,7 @@ addUser()
    echo "Enter age"
    checkInput age
    echo "$fname:$lname:$address:$zip:$phone:$phone2:$email:$age" >> "$DBFILE"
+   ./userInterface
 }
 
 checkInput()
