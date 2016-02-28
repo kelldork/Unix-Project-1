@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 userInterface()
 {
 	while true ; do
@@ -18,7 +17,10 @@ userInterface()
 			[Aa]* ) clear
 				 ;; 
 			[Bb]* ) clear
-				./adduser.sh;; 
+				./adduser.sh
+				clear
+				echo "New record has been added to the database."
+				sleep 3;; 
 			[Cc]* ) clear
 				;;
 			[Dd]* ) clear
