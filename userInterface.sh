@@ -1,5 +1,11 @@
 #!/bin/sh
 
+pause()
+{
+	echo -n "\nPress enter key to continue..."
+	read temp
+}
+
 userInterface()
 {
 	while true ; do
@@ -18,22 +24,24 @@ userInterface()
 		case $input in
 			[Aa]* ) clear
 					bash findrecord.sh
-					sleep 3;; 
+					pause;; 
 
 			[Bb]* ) clear
 					bash adduser.sh
-					echo "New record has been added to the database."
-					sleep 3;;
+					echo "\nNew record has been added to the database."
+					pause;;
 
 			[Cc]* ) clear
 					;;
 
 			[Dd]* ) clear
-					;;
+					bash removeRecord.sh
+					echo "\nRecord has been removed from the databse."
+					pause;;
 
 			[Ee]* ) clear
 					./display.sh
-					sleep 5;;
+					pause;;
 
 			[Ff]* ) clear
 					echo "Good Bye!"

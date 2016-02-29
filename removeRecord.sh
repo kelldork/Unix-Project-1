@@ -13,7 +13,7 @@ removeRecord()
 	done
 
 	number=$(expr $number + 1)
-	sed -i "/$number/d" contactlist.txt
+	sed -i "$number d" contactlist.txt
 }
 
 removeRecord
