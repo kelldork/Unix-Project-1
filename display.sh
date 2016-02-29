@@ -21,7 +21,7 @@ display()
             name+=" ${word}"
             if [ "$count" -eq 2 ]
             then
-              echo $num $name
+              echo $num. $name
               break #Done printing first and last name
             fi
             done
