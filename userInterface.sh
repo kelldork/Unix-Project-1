@@ -15,9 +15,10 @@ userInterface()
 	
 		case $input in
 			[Aa]* ) clear
-				 ;; 
+				bash findrecord.sh
+				sleep 3;; 
 			[Bb]* ) clear
-				./adduser.sh
+				bash adduser.sh
 				clear
 				echo "New record has been added to the database."
 				sleep 3;; 
