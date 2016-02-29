@@ -1,0 +1,60 @@
+SECTION III (find function)
+
+The findRecord() function searches the database. The function asks the user to input the first or last name of the person whose record they want to find and creates a variable, KEY. The function then prints out all records containing the ‘KEY’. The user must type the name exactly as it is written in the database or it will not be displayed. If the user inputs a name that is not found in the database an error message will read, ”No records containing ‘KEY’.”
+
+
+SECTION IV
+
+Convention so shell knows what kind of interpreter to run:
+#!/bin/bash
+
+Stores the database file into a new variable, DBFILE:
+DBFILE="contactlist.txt"
+
+Beginning of the findRecord function:
+findRecord() 
+{
+
+Prints the user prompt:
+echo "Enter a first OR last name to"
+echo "search (use proper capitalization):"
+
+Stores the user's input into a new variable, KEY
+read KEY
+
+Searches DBFILE for KEY. If KEY is not found in the database the script will move to the else statement:
+if grep -q $KEY $DBFILE; then
+
+Prints formated output message:
+echo " "
+echo "Records containing '$KEY':"
+
+Prints all records in database that contain KEY. Replaces all ":" with " ":
+echo -e "$(grep $KEY $DBFILE | tr ":" " ")\n"
+
+Begin else statement:
+else
+
+Prints error message if no record containing KEY is found:
+echo "No records containing '$KEY'."
+
+Exits script and sets exit status to 0 (success):
+exit 0
+
+Ends if-else statement:
+fi
+}
+
+Runs findRecord function:
+findRecord
+
+
+
+Example “contactlist.txt” used in testing:
+*insert screenshot of contactlist.txt*
+
+1) *insert screenshot of search with one record match*
+
+2) *insert screenshot of search with multiple record match*
+
+3) *insert screenshot of search with no record match*
