@@ -20,7 +20,6 @@ addUser()
    echo "Enter age"
    checkInput age
    echo "$fname:$lname:$address:$zip:$phone:$phone2:$email:$age" >> "$DBFILE"
-   ./userInterface.sh
 }
 
 checkInput()

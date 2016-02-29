@@ -9,17 +9,19 @@ display()
    #Remove all : and replace them with spaces
    dbContentsNoColon=${dbContents//:/ }
    IFS=$'\n'
+   num=0
    for line in $dbContentsNoColon
       do 
          IFS=' '
          count=0
+         num=$((num+1))
          for word in $line
             do
             count=$((count+1))
             name+=" ${word}"
             if [ "$count" -eq 2 ]
             then
-              echo $name
+              echo $num. $name
               break #Done printing first and last name
             fi
             done
