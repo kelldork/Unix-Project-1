@@ -1,5 +1,5 @@
 First Name:Last Name:Street Address:Zip Code:Home Phone:Work Phone:Email:Age
-Sean:Miller:334 Guadalupe St:78703:5128745986:5128895410:miller@txstate.edu:21
+Sean:Miller:334 Guadalupe St:78703:5128745986:5128895410:miller@txstate.edu:22
 Azaan:Dhalla:2874 51st St:78701:5123315694:5125645632:dhalla@txstate.edu:23
-Kasie:Kelldorf:91 Main St:78723:5127933653:5123417479:kelldorf@txstate.edu:22
+Kasie:Kelldorf:91 Main St:78723:5127933653:5123417479:kelldorf@txstate.edu:23
 Lais:DeLeau:128 Turtle Rd:78729:5123006497:5127418523:deleau@txstate.edu:24

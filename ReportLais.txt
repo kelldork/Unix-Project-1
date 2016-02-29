@@ -1,0 +1,33 @@
+Report Unix 
+
+Section II
+
+The database was designed to store 8 information from each contact. The information includes:
+- First Name: This field stores the first name of each contact.
+- Last Name: This field stores the last name of each contact. This field was separated from first name so it would be easier to find information.
+- Street Address: This field stores the address of the contact without the zip code.
+- Zip Code: This field stores the zip code and compliments the street address. This field was separated from the address so the entries would not be too long, and it would make it easier to find specific information.
+- Home Phone: This field stores the home phone from the contact.
+- Work phone: This field stores the work phone from the contact. The database allowes the user to store more than one phone number from the contact, also it separates business and personal numbers so it is easier to decide which phone number the user needs.
+- Email: This field stores the email address of the contact. 
+- Age: This field stores the age of each contact. This field was included in order to personalize the contact information further.
+
+The text file for the database stores each field separated by a colon.  This allows the shell script to recognize when one field ends and the other starts. Because colons are used as delimitators, it is considered an invalid character when inputing new information to the database.
+
+This is the content of the contactlist.txt file that stores the database informations.
+First Name:Last Name:Street Address:Zip Code:Home Phone:Work Phone:Email:Age
+Sean:Miller:334 Guadalupe St:78703:5128745986:5128895410:miller@txstate.edu:21
+Azaan:Dhalla:2874 51st St:78701:5123315694:5125645632:dhalla@txstate.edu:23
+Kasie:Kelldorf:91 Main St:78723:5127933653:5123417479:kelldorf@txstate.edu:22
+Lais:DeLeau:128 Turtle Rd:78729:5123006497:5127418523:deleau@txstate.edu:24
+
+
+
+Section III (adduser function and getInput aux function)
+
+The addUser() function let the user input a new entry in the database. The function requests the user to input all fields in the database, checks if the entry contains illegal characters, such as colons, and inserts the new contact in the database text file. If the user leave a space blank, the function recognizes it as an entry, so the user can add new contacts even without having all the contact information.
+ An auxiliary function getInput was designed to check for the illegal entry. This function takes a variable as an argument.  It reads the input from the user, checks for colons in the input, and sets the value of the variable it was passed to the user input if there were no validation errors. The function also requests the user to retype the information if a colon is found in the input.
+
+(display function)
+
+The display function prints on the screen the names of the contacts in the database. The function creates a variable dbContentsNoColon and inputs the information from the database in the variable without the field delimitator. Then, a nested for loop goes over each line in the text file, followed by each word in each line to concatenate the first and last name into a single variable.  After 2 words in a line are encountered, the name is printed.  If a user is entered The function was set up this way so the user can check which contacts are already included in the database without the need to display all the information from the contact.
