@@ -4,13 +4,14 @@ userInterface()
 {
 	while true ; do
 		clear
-		echo 'Welcome to my contact database, please select in the following menu:'
+		echo 'Welcome to our contact database, please select one of the following menu options:'
 		echo '(a) Find a record'
 		echo '(b) Add a new record'
 		echo '(c) Update a record'
 		echo '(d) Remove a record'
 		echo '(e) Quit'
 		echo -n '> Selection is : '
+	
 		read input
 	
 		case $input in
