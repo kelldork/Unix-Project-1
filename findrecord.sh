@@ -1,7 +1,8 @@
 #!/bin/bash
 DBFILE="contactlist.txt"
 
-findRecord() {
+findRecord() 
+{
   echo "Enter a first OR last name to"
   echo "search (use proper capitalization):"
   read KEY
