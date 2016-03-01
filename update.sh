@@ -1,17 +1,5 @@
 #!/bin/bash
 
-ContactFields()
-{
-	echo "1: First Name"; echo
-	echo "2: Last Name"; echo
-	echo "3: Street Address"; echo
-	echo "4: Zip Code"; echo
-	echo "5: Home Phone"; echo
-	echo "6: Work Phone"; echo
-	echo "7: Email"; echo
-	echo "8: Age"; echo
-}
-
 # Print contacts
 bash display.sh
 
