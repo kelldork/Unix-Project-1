@@ -2,7 +2,7 @@
 
 pause()
 {
-	echo -n "\nPress enter key to continue..."
+	echo -n "\nPress enter to continue..."
 	read temp
 }
 
@@ -36,7 +36,7 @@ userInterface()
 
 			[Dd]* ) clear
 					bash removeRecord.sh
-					echo "\nRecord has been removed from the databse."
+					echo "\nRecord has been removed from the database."
 					pause;;
 
 			[Ee]* ) clear
@@ -45,7 +45,7 @@ userInterface()
 
 			[Ff]* ) clear
 					echo "Good Bye!"
-					sleep 2
+					sleep 1
 					clear
 					return 0;;
 
