@@ -2,12 +2,13 @@
 
 ./display.sh
 
-echo -n 'Enter the number of the record that you want to remove.'
+while true; do
+   	read -p 'Enter the number of the record that you want to remove > ' contact
 	
-read contact
-while [[ ! $contact =~ ^[0-9]+$ ]]; do
-   	echo 'Incorrect input please enter an integer value'
-	read contact
+	case $contact in
+		[[:digit:]] ) break;;
+		* ) echo "Invalid input!"
+	esac
 done
 
 contact=$(expr $contact + 1)

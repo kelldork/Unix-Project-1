@@ -4,18 +4,6 @@
 bash display.sh
 
 # Delete current contact
-
-#echo -n 'Enter the number of the record that you want to update.'
-
-#read contact 
-#while [[ ! $contact =~ ^[0-9]+$ ]]; do
-#	echo 'Incorrect input please enter an integer value'
-#	read contact 
-#done
-
-#num=$((`wc -l contactlist.txt | awk '{print $1}'` - 1))
-#echo $num
-
 while true; do
 	read -p "Enter the number of the record that you wish to update: " contact
 	case $contact in
