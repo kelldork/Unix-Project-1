@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Print contacts
-bash display.sh
+./display.sh
 
 # Delete current contact
 echo -n 'Enter the number of the record that you want to update.'
@@ -18,6 +18,6 @@ sed -i "$contact d" contactlist.txt
 
 # Add new user
 echo "Please enter new information: "
-bash adduser.sh
+./adduser.sh
 
 exit 0
